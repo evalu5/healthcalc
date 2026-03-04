@@ -50,7 +50,7 @@ public class WCTest {
             // Arrange (los datos vienen del CsvSource)
             
             // Act
-            String result = healthCalc.wcClassification(wc, 'm');
+            String result = healthCalc.wcClassification(wc, 'H');
             
             // Assert
             assertEquals(expected, result);
@@ -66,7 +66,7 @@ public class WCTest {
         @DisplayName("Límites de riesgo para mujeres")
         void testWCMujeres(float wc, String expected) throws InvalidHealthDataException {
             // Act
-            String result = healthCalc.wcClassification(wc, 'f');
+            String result = healthCalc.wcClassification(wc, 'M');
             
             // Assert
             assertEquals(expected, result);
