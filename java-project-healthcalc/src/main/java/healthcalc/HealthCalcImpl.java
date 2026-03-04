@@ -46,5 +46,28 @@ public class HealthCalcImpl implements HealthCalc {
         }
         return weight / Math.pow(height, 2);
     }
+
+    @Override
+    public double idealBodyWeight(double height, char gender) throws InvalidHealthDataException {
+        // Validación de la altura (Hard Limits en centímetros: 30 a 300)
+        if (height < 30 || height > 300) {
+            throw new InvalidHealthDataException("Height must be within a possible biological range [30-300] cm.");
+        }
+
+        // Validación del género
+        if (gender != 'H' && gender != 'M') {
+            throw new InvalidHealthDataException("Gender must be 'H' (Men) or 'M' (Women).");
+        }
+
+        // Cálculo de la fórmula de Lorentz
+        double ibw = 0.0;
+        if (gender == 'H') {
+            ibw = (height - 100) - ((height - 150) / 4.0);
+        } else if (gender == 'M') {
+            ibw = (height - 100) - ((height - 150) / 2.0);
+        }
+        
+        return ibw;
+    }
     
 }
