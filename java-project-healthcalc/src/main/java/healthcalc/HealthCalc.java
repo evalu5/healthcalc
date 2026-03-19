@@ -43,4 +43,19 @@ public interface HealthCalc {
      * @throws InvalidHealthDataException if data is biologically impossible or format is wrong.
      */
     public double idealBodyWeight(double height, char gender) throws InvalidHealthDataException;
+
+
+	
+/**
+     * Classifies the cardiovascular risk based on Waist Circumference (WC).
+     *
+     * @param waistCircumference Waist circumference in cm.
+     * @param gender             Gender of the person ('H' for men, 'M' for women).
+     * @return                   The risk classification ("Normal", "Alto", "Muy alto").
+     * @throws InvalidHealthDataException if data is biologically impossible.
+     */
+    public String wcClassification(double waistCircumference, char gender) throws InvalidHealthDataException;
+	
+
 }
+

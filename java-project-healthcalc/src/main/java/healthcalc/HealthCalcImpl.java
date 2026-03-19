@@ -49,7 +49,7 @@ public class HealthCalcImpl implements HealthCalc {
 
     @Override
     public double idealBodyWeight(double height, char gender) throws InvalidHealthDataException {
-        // Validación de la altura (Hard Limits en centímetros: 30 a 300)
+        // Validación de la altura (en cm)
         if (height < 30 || height > 300) {
             throw new InvalidHealthDataException("Height must be within a possible biological range [30-300] cm.");
         }
@@ -68,6 +68,31 @@ public class HealthCalcImpl implements HealthCalc {
         }
         
         return ibw;
+    }
+
+
+    @Override
+    public String wcClassification(double waistCircumference, char gender) throws InvalidHealthDataException {
+        // 1. Validación del perímetro de cintura (cm)
+        if (waistCircumference < 30 || waistCircumference > 250) {
+            throw new InvalidHealthDataException("Waist circumference must be within [30-250] cm.");
+        }
+
+        // 2. Validación del género
+        if (gender != 'H' && gender != 'M') {
+            throw new InvalidHealthDataException("Gender must be 'H' (Men) or 'M' (Women).");
+        }
+
+        // 3. Clasificación del riesgo cardiovascular según el perímetro de cintura y el género
+        if (gender == 'H') {
+            if (waistCircumference >= 102) return "Riesgo Muy Elevado";
+            if (waistCircumference >= 94) return "Riesgo Elevado";
+            return "Riesgo Bajo";
+        } else { // Gender is 'M'
+            if (waistCircumference >= 88) return "Riesgo Muy Elevado";
+            if (waistCircumference >= 80) return "Riesgo Elevado";
+            return "Riesgo Bajo";
+        }
     }
     
 }
