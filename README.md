@@ -340,3 +340,13 @@ Para cada categoría y género, probamos valores que están justo en el límite 
 - Ejecutar los tests con informe de cobertura (previamente configurado en pom.xml): `mvn test`
 
 </details>
+
+
+## Especificación
+
+### Casos de uso
+Diagrama de casos de uso de las funcionalidades de HealthCalc
+
+![Diagrama de Casos de Uso](doc/diagrama_casos_uso.png)
+
+
