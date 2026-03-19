@@ -263,6 +263,12 @@ Para cada categoría, probamos valores que están justo en el límite para asegu
 
 </details>
 
+## Especificación de Casos de Uso
+<details>
+<summary><b>Documentación</b></summary>
+* [Especificación: Peso Corporal Ideal - Lorentz (CU-03)](doc/Especificación Peso Corporal Ideal.txt)
+</details>
+
 ## Instalación y ejecución
 
 <details>
