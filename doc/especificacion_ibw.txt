@@ -6,14 +6,20 @@ Descripción: El sistema calcula el peso teórico saludable de un individuo bas�
 Actor Principal: Usuario
 Ámbito (Scope): Marco lógico donde se ejecutan las operaciones de la herramienta de cálculo HealthCalc
 Nivel (Level): Objetivo de Usuario
-- Interesados y disparadores
-Usuario:
-Hospital:
-Disparador: Usuario solicita su resultado tras introducir los datos
+
+- Interesados
+Usuario: Quiere saber el peso ideal para su salud.
+Hospital: Quiere un cálculo preciso que esté basado en fórmulas válidadas (Lorentz).
+--Disparador: Usuario solicita su resultado tras introducir los datos.
+
 - Condiciones y Garantías
-Precondiciones: 
-Garantía de Éxito (Success Guarantee): 
-Garantía Mínima (Minimal Guarantee):
+--Precondiciones: 
+El sistema debe tener registrada la fórmula de Lorentz, para su cálculo, de ambos géneros.
+El usuario debe saber e introducir su estatura en cm.
+La aplicación está en un estado funcional.
+--Garantía de Éxito (Success Guarantee): 
+--Garantía Mínima (Minimal Guarantee):
+
 - Flujos de eventos
 Disparador (Trigger):
 Escenario Principal de Éxito (Main Success Scenario):
