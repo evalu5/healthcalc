@@ -18,7 +18,10 @@ El sistema debe tener registrada la fórmula de Lorentz, para su cálculo, de am
 El usuario debe saber e introducir su estatura en cm.
 La aplicación está en un estado funcional.
 --Garantía de Éxito (Success Guarantee): 
+El usuario obtiene un resultado exacto y válido sobre su peso óptimo.
+El sistema queda disponible para hacer otra consulta con la calculadora.
 --Garantía Mínima (Minimal Guarantee):
+El sistema informa de un error si el cálculo falla (si los datos son inválidos o la fórmula está mal), no da un resultado inválido y lleva a la página de inicio.
 
 - Flujos de eventos
 Disparador (Trigger):
