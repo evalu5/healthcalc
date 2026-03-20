@@ -9,7 +9,7 @@ Nivel (Level): Objetivo de Usuario
 
 - Interesados
 Usuario: Quiere saber el peso ideal para su salud.
-Hospital: Quiere un cálculo preciso que esté basado en fórmulas válidadas (Lorentz).
+Hospital: Quiere un cálculo preciso que esté basado en fórmulas validadas (Lorentz).
 --Disparador: Usuario solicita su resultado tras introducir los datos.
 
 - Condiciones y Garantías
@@ -24,7 +24,15 @@ El sistema queda disponible para hacer otra consulta con la calculadora.
 El sistema informa de un error si el cálculo falla (si los datos son inválidos o la fórmula está mal), no da un resultado inválido y lleva a la página de inicio.
 
 - Flujos de eventos
-Disparador (Trigger):
 Escenario Principal de Éxito (Main Success Scenario):
-Extensiones (Flujos Alternativos):
+1.Usuario introduce sus datos (Género y Altura en cm).
+2.Sistema valida que los datos sean válidos.
+3.Sistema calcula con la formula de Lorentz, según el género indicado.
+PCI= (altura(cm)-100)-(altura(cm)-150/K), siendo k=4 para hombres y k=2 para mujeres.
+4.Sistema muestra resultado del peso ideal por pantalla.
 
+-Extensiones (Flujos Alternativos):
+2a. Altura fuera de rango (30cm-300cm), mostraría un mensaje de error el sistema y el sistema permite su corrección.
+2b. Datos introducidos no son números, error de formato incorrecto y el sistema permite su corrección.
+2c. Género no ha sido seleccionado, sistema muestra error y el sistema permite su corrección.
+4a. El sistema tiene un fallo en el motor de cálculo y vuelve al estado inicial, la garantía mínima, para evitar resultado inválido.
