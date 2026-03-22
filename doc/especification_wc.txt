@@ -34,4 +34,12 @@ Extensiones
     Si waistCircumference < 30 o > 250, el sistema lanza InvalidHealthDataException: "Waist circumference must be within [30-250] cm."
 3a. Género no reconocido:
     Si el género es distinto de 'H' o 'M', el sistema lanza InvalidHealthDataException: "Gender must be 'H' (Men) or 'M' (Women)."
-
+4a. Lógica de clasificación (Umbrales):
+    - Si Género es 'H' (Hombre):
+        * Perímetro >= 102 cm: "Riesgo Muy Elevado"
+        * 94 cm <= Perímetro < 102 cm: "Riesgo Elevado"
+        * Perímetro < 94 cm: "Riesgo Bajo"
+    - Si Género es 'M' (Mujer):
+        * Perímetro >= 88 cm: "Riesgo Muy Elevado"
+        * 80 cm <= Perímetro < 88 cm: "Riesgo Elevado"
+        * Perímetro < 80 cm: "Riesgo Bajo"
