@@ -41,3 +41,9 @@ Extensiones
 2a. Peso fuera de rango: Si el peso es < 1 o > 700, el sistema lanza InvalidHealthDataException.
 3a. Altura fuera de rango: Si la altura es < 30 o > 300, el sistema lanza InvalidHealthDataException.
 4a. Valores negativos o cero: El sistema rechaza cualquier entrada <= 0 lanzando InvalidHealthDataException.
+5a. IMC resultante excesivo: Si el cálculo final es > 150, el sistema lanza la excepción.
+6a. El sistema clasifica el resultado según los siguientes umbrales:
+	- IMC < 18.5: "Underweight"
+	- 18.5 <= IMC < 25: "Normal weight"
+	- 25 <= IMC < 30: "Overweight"
+	- IMC >= 30: "Obesity" (Incluye Grados I, II y III).
