@@ -11,3 +11,12 @@ El profesional sanitario introduce el peso y la altura de un paciente para obten
 Interesados
 - Personal Sanitario: Requiere un cálculo rápido y automatizado que evite errores manuales.
 - Hospital El Clínico: Quiere un cálculo preciso que esté basado en fórmulas validadas y que sus datos registrados sigan los estándares de la OMS.
+
+Precondiciones
+- El usuario tiene acceso al módulo de cálculo de la aplicación HealthCalc.
+- El sistema debe tener registrada la fórmula de cálculo y los umbrales clasificatorios para procesar el resultado de la misma.
+Disparador: El usuario accede a la calculadora y selecciona la métrica IMC.
+
+Garantías
+- Garantía de Éxito: El IMC se calcula, se muestra su clasificación (OMS) y no se permiten datos fuera de rango.
+- Garantía Mínima: En caso de error en los datos de entrada, el sistema lanza una InvalidHealthDataException, no da un resultado inválido y lleva a la página de inicio.
