@@ -1,0 +1,13 @@
+Caso de Uso: Calcular Índice de Masa Corporal (IMC / BMI)
+
+ID: CU-01
+Actor Principal: Usuario (Personal sanitario).
+Ámbito: Marco lógico donde se ejecutan las operaciones de la herramienta de cálculo HealthCalc.
+Nivel: Objetivo de usuario.
+
+Descripción
+El profesional sanitario introduce el peso y la altura de un paciente para obtener su Índice de Masa Corporal. El sistema debe validar que los datos sean biológicamente coherentes, realizar el cálculo matemático y clasificar el resultado final según los estándares de la OMS.
+
+Interesados
+- Personal Sanitario: Requiere un cálculo rápido y automatizado que evite errores manuales.
+- Hospital El Clínico: Quiere un cálculo preciso que esté basado en fórmulas validadas y que sus datos registrados sigan los estándares de la OMS.
