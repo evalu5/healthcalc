@@ -1,0 +1,23 @@
+Caso de Uso: Medición del Perímetro Abdominal (WC - Waist Circumference)
+
+ID: CU-02
+Actor Principal: Usuario (Personal sanitario).
+Ámbito: Marco lógico donde se ejecutan las operaciones de la herramienta de cálculo HealthCalc.
+Nivel: Objetivo de usuario.
+
+Descripción
+El profesional sanitario introduce el perímetro de cintura y el género del paciente. El sistema valida la integridad biológica de los datos, verifica que el identificador de género sea correcto ('H' o 'M') y determina el nivel de riesgo cardiovascular basándose en umbrales específicos por sexo.
+
+Interesados
+- Personal Sanitario: Necesita una clasificación inmediata del riesgo cardiovascular sin necesidad de memorizar tablas de umbrales por género.
+- Hospital El Clínico: Requiere que el sistema bloquee datos erróneos (como géneros no codificados o medidas físicamente imposibles) para mantener la calidad de la base de datos.
+
+Precondiciones
+- El usuario tiene acceso al módulo de cálculo de la aplicación HealthCalc.
+- El sistema implementa la lógica de clasificación diferenciada por géneros.
+
+Disparador: El usuario accede a la calculadora y selecciona la métrica Perímetro Abdominal (WC).
+
+Garantías
+- Garantía de Éxito: El sistema devuelve la cadena exacta de riesgo ("Riesgo Bajo", "Riesgo Elevado" o "Riesgo Muy Elevado") y procesa la entrada solo si cumple los rangos.
+- Garantía Mínima: Si los datos no cumplen los requisitos establecidos, el sistema lanza InvalidHealthDataException junto a un mensaje de error y no realiza el cálculo.
