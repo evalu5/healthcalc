@@ -353,5 +353,5 @@ Diagrama de casos de uso de las funcionalidades de HealthCalc
   
 * [Especificación: Peso Corporal Ideal - Lorentz (CU-03)](doc/especificacion_ibw.txt)
 </details>
-* [Especificación: Calculo del Índice de masa corporal (CU-01)](docs/especification_imc.txt)
-* [Especificación: Cálculo del Perímetro Abdominal (WC - Waist Circumference)](docs/especification_wc.txt)
+* [Especificación: Calculo del Índice de masa corporal (CU-01)](doc/especification_imc.txt)
+* [Especificación: Cálculo del Perímetro Abdominal (WC - Waist Circumference)](doc/especification_wc.txt)
