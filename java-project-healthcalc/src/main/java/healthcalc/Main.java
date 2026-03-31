@@ -11,11 +11,11 @@ public class Main {
             System.out.print("Enter height (cm): ");
             double a = sc.nextDouble();
             double imc = calc.bmi(p, a/100.0);
-            System.out.println("Your BMI is: " + imc + " (" + calc.bmiClassification(imc) + ")");
+            System.out.println("Your BMI is: " + String.format("%.3f", imc) + " (" + calc.bmiClassification(imc) + ")");
             System.out.print("Enter your gender (H = male, M = female): ");
             char gender = sc.next().toUpperCase().charAt(0);
             double ibw = calc.idealBodyWeight(a, gender);
-            System.out.println("Your IBW is: " + ibw);
+            System.out.println("Your IBW is: " + String.format("%.3f", ibw));
             System.out.print("Enter your waist circumference (cm): ");
             double waist = sc.nextDouble();
             String wcRisk = calc.wcClassification(waist, gender);
