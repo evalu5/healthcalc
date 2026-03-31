@@ -24,6 +24,7 @@ public class Main {
         } catch (InvalidHealthDataException e) {
             System.out.println("Error: " + e.getMessage());
         }
+        sc.close();
         
     }
 }
