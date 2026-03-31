@@ -6,15 +6,20 @@ public class Main {
         HealthCalc calc = new HealthCalcImpl();
         Scanner sc = new Scanner(System.in);
         try {
-            System.out.print("Introduce peso (kg): ");
+            System.out.print("Enter weight (kg): ");
             double p = sc.nextDouble();
-            System.out.print("Introduce altura (m): ");
+            System.out.print("Enter height (m): ");
             double a = sc.nextDouble();
             double imc = calc.bmi(p, a);
-            System.out.println("Tu IMC es: " + imc + " (" + calc.bmiClassification(imc) + ")");
+            System.out.println("Your BMI is: " + imc + " (" + calc.bmiClassification(imc) + ")");
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         }
+        System.out.print("Enter your gender (H = male, M = female): ");
+        char gender = sc.next().toUpperCase().charAt(0);
+
+        System.out.print("Enter your waist circumference (cm): ");
+        double waist = sc.nextDouble();
     }
 }
 
