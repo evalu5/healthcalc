@@ -1,6 +1,7 @@
 package healthcalc;
 
 import java.util.Scanner;
+import healthcalc.exceptions.InvalidHealthDataException;
 public class Main {
     public static void main(String[] args) {
         HealthCalc calc = new HealthCalcImpl();
@@ -20,7 +21,7 @@ public class Main {
             double waist = sc.nextDouble();
             String wcRisk = calc.wcClassification(waist, gender);
             System.out.println("Your Cardiovascular Risk is: " + wcRisk);
-        } catch (Exception e) {
+        } catch (InvalidHealthDataException e) {
             System.out.println("Error: " + e.getMessage());
         }
         
