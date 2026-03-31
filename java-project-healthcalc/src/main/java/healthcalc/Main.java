@@ -14,11 +14,12 @@ public class Main {
             System.out.println("Your BMI is: " + imc + " (" + calc.bmiClassification(imc) + ")");
             System.out.print("Enter your gender (H = male, M = female): ");
             char gender = sc.next().toUpperCase().charAt(0);
-
-            System.out.print("Enter your waist circumference (cm): ");
-            double waist = sc.nextDouble();
             double ibw = calc.idealBodyWeight(a, gender);
             System.out.println("Your IBW is: " + ibw);
+            System.out.print("Enter your waist circumference (cm): ");
+            double waist = sc.nextDouble();
+            String wcRisk = calc.wcClassification(waist, gender);
+            System.out.println("Your Cardiovascular Risk is: " + wcRisk);
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         }
