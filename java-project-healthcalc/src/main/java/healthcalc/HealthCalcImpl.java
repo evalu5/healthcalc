@@ -37,7 +37,7 @@ public class HealthCalcImpl implements HealthCalc {
             throw new InvalidHealthDataException("Weight must be within a possible biological range [1-700] kg.");
         }
         if (height < 30 || height > 300) {
-            throw new InvalidHealthDataException("Height must be within a possible biological range [0.30-3.00] m.");
+            throw new InvalidHealthDataException("Height must be within a possible biological range [30-300] cm.");
         }
         double heightmeters=height/100;
         return weight / Math.pow(heightmeters, 2);
