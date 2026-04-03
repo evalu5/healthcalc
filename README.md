@@ -339,4 +339,21 @@ Para cada categoría y género, probamos valores que están justo en el límite 
 - Ejecutar los tests: Clic en Run Tests usando el IDE o con Maven: `mvn test`
 - Ejecutar los tests con informe de cobertura (previamente configurado en pom.xml): `mvn test`
 
+## Behaviour Driven Development (BDD)
+
+En esta sección se detallan las historias de usuario implementadas para la calculadora de salud, utilizando Gherkin para definir los comportamientos esperados.
+
+### 🍎 Índice de Masa Corporal (BMI)
+* **Historia de Usuario:** Como estudiante de Ingeniería de la Salud, quiero calcular el BMI para obtener mi indicador de estado nutricional.
+* **Escenarios:**
+(./src/test/resources/features/BMI.feature)
+   
+
+### 📏 Perímetro Abdominal (WC)
+* **Historia de Usuario:** Como estudiante de Ingeniería de la Salud, quiero clasificar el perímetro abdominal para obtener información sobre mi riesgo cardiovascular.
+* **Escenarios:**
+(./src/test/resources/features/WC.feature)
+  
+
+
 </details>
