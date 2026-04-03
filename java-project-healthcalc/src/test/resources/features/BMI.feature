@@ -1,4 +1,3 @@
-  
 Feature: Cálculo del Índice de Masa Corporal (BMI)
   Como estudiante de Ingeniería de la Salud
   Quiero calcular el índice de masa corporal según el peso y la altura
@@ -17,9 +16,9 @@ Feature: Cálculo del Índice de Masa Corporal (BMI)
 
     Examples:
       | peso | altura | resultado |
-      | 70.0 | 1.75   | 22.86     |
-      | 85.0 | 1.80   | 26.23     |
-      | 50.0 | 1.50   | 22.22     |
+      | 70.0 | 175.0  | 22.86     |
+      | 85.0 | 180.0  | 26.23     |
+      | 50.0 | 150.0  | 22.22     |
 
   @EdgeCase
   Scenario Outline: Cálculo del BMI en límites biológicos permitidos
@@ -30,8 +29,8 @@ Feature: Cálculo del Índice de Masa Corporal (BMI)
 
     Examples:
       | peso  | altura | resultado |
-      | 1.0   | 0.30   | 11.11     |
-      | 700.0 | 3.00   | 77.78     |
+      | 1.0   | 30.0   | 11.11     |
+      | 700.0 | 300.0  | 77.78     |
 
   @ErrorHandling
   Scenario Outline: Intento de cálculo del BMI con datos biológicamente imposibles
@@ -42,10 +41,11 @@ Feature: Cálculo del Índice de Masa Corporal (BMI)
 
     Examples:
       | peso  | altura |
-      | -10.0 | 1.70   |
-      | 70.0  | -1.70  |
-      | 0.0   | 1.70   |
+      | -10.0 | 170.0  |
+      | 70.0  | -170.0 |
+      | 0.0   | 170.0  |
       | 70.0  | 0.0    |
-      | 0.9   | 1.70   |
-      | 700.1 | 1.70   |
-      | 70.0  | 3.01   |
+      | 0.9   | 170.0  |
+      | 700.1 | 170.0  |
+      | 70.0  | 300.1  |
+      | 70.0  | 29.9   |
