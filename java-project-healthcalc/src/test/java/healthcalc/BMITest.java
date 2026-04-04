@@ -30,7 +30,7 @@ public class BMITest {
         @DisplayName("Cálculo de BMI con valores estándar (usando CM)")
         void testBmiValido() throws InvalidHealthDataException {
             double weight = 70.0;
-            double height = 175.0; // En centímetros para que tu Imp no lance error
+            double height = 175.0; 
             double expectedBmi = 70.0 / Math.pow(1.75, 2);
 
             double result = healthCalc.bmi(weight, height);

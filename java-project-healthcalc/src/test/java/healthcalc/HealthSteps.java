@@ -72,7 +72,6 @@ public class HealthSteps {
 
     @Given("el género es {string}")
     public void el_género_es(String genderStr) {
-        // Tu feature usa "H", "M", "X". Tomamos el primer carácter.
         this.gender = genderStr.toUpperCase().charAt(0);
     }
 
