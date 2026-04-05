@@ -116,6 +116,11 @@ public class HealthSteps {
         }
     }
 
+    // --- PASOS PARA FULL BMI ---
+    @Given("un valor de BMI es {double}")
+    public void un_valor_de_bmi_es(Double valor) {
+        this.resultNum = valor;
+    }
 
     // --- MANEJO DE ERRORES COMÚN ---
 
