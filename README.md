@@ -338,31 +338,37 @@ Para cada categoría y género, probamos valores que están justo en el límite 
 - Ejecutar la aplicación: Clic en Run usando el IDE.
 - Ejecutar los tests: Clic en Run Tests usando el IDE o con Maven: `mvn test`
 - Ejecutar los tests con informe de cobertura (previamente configurado en pom.xml): `mvn test`
+</details>
 
 ## Behaviour Driven Development (BDD)
 
 En esta sección se detallan las historias de usuario y los escenarios de prueba implementadas para la calculadora de salud, utilizando Gherkin para definir los comportamientos esperados.
 
 ### Índice de Masa Corporal (BMI)
-* **Historia de Usuario:** Como usuario de la calculadora de la Salud, quiero calcular el BMI para obtener mi indicador de estado nutricional.
+* **Historia de Usuario:** Como usuario de la calculadora de la salud, quiero calcular el BMI para obtener mi indicador de estado nutricional.
 * **Escenarios:**
+    * 
 
 * **Enlace al fichero:** [BMI.feature](./src/test/resources/features/BMI.feature)
    
 
 ### Clasificación completa del Índice de Masa Corporal (Full BMI)
+* **Historia de Usuario:** Como usuario de la calculadora de la salud, quiero obtener mi categoría de peso para conocer mi estado nutricional.
+* **Escenarios:**
+    * 
 
 * **Enlace al fichero:** [fullBMI.feature](./src/test/resources/features/fullBMI.feature)
 
 ### Perímetro Abdominal (WC)
-* **Historia de Usuario:** Como estudiante de Ingeniería de la Salud, quiero clasificar el perímetro abdominal para obtener información sobre mi riesgo cardiovascular.
+* **Historia de Usuario:** Como usuario de la calculadora de la salud, quiero clasificar el perímetro abdominal para obtener información sobre mi riesgo cardiovascular.
 * **Escenarios:**
+    *
 
 * **Enlace al fichero:** [WC.feature](./src/test/resources/features/WC.feature)
   
 ### Peso Corporal Ideal (IBW)
-
+* **Historia de Usuario:** Como usuario de la calculadora de la salud, quiero calcular mi peso ideal según mi altura y género.
+* **Escenarios:**
+    *
 
 * **Enlace al fichero:** [IBW.feature](./src/test/resources/features/IBW.feature)
-
-</details>
