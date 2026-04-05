@@ -341,19 +341,28 @@ Para cada categoría y género, probamos valores que están justo en el límite 
 
 ## Behaviour Driven Development (BDD)
 
-En esta sección se detallan las historias de usuario implementadas para la calculadora de salud, utilizando Gherkin para definir los comportamientos esperados.
+En esta sección se detallan las historias de usuario y los escenarios de prueba implementadas para la calculadora de salud, utilizando Gherkin para definir los comportamientos esperados.
 
-### 🍎 Índice de Masa Corporal (BMI)
-* **Historia de Usuario:** Como estudiante de Ingeniería de la Salud, quiero calcular el BMI para obtener mi indicador de estado nutricional.
+### Índice de Masa Corporal (BMI)
+* **Historia de Usuario:** Como usuario de la calculadora de la Salud, quiero calcular el BMI para obtener mi indicador de estado nutricional.
 * **Escenarios:**
-(./src/test/resources/features/BMI.feature)
+
+* **Enlace al fichero:** [BMI.feature](./src/test/resources/features/BMI.feature)
    
 
-### 📏 Perímetro Abdominal (WC)
+### Clasificación completa del Índice de Masa Corporal (Full BMI)
+
+* **Enlace al fichero:** [fullBMI.feature](./src/test/resources/features/fullBMI.feature)
+
+### Perímetro Abdominal (WC)
 * **Historia de Usuario:** Como estudiante de Ingeniería de la Salud, quiero clasificar el perímetro abdominal para obtener información sobre mi riesgo cardiovascular.
 * **Escenarios:**
-(./src/test/resources/features/WC.feature)
-  
 
+* **Enlace al fichero:** [WC.feature](./src/test/resources/features/WC.feature)
+  
+### Peso Corporal Ideal (IBW)
+
+
+* **Enlace al fichero:** [IBW.feature](./src/test/resources/features/IBW.feature)
 
 </details>
