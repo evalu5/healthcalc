@@ -351,7 +351,7 @@ En esta sección se detallan las historias de usuario y los escenarios de prueba
     * Cálculo del BMI en límites biológicos permitidos
     * Intento de cálculo del BMI con datos biológicamente imposibles
 
-* **Enlace al fichero:** [BMI.feature](./src/test/resources/features/BMI.feature)
+* **Enlace al fichero:** [BMI.feature](./java-project-healthcalc/src/test/resources/features/BMI.feature)
    
 
 ### Clasificación completa del Índice de Masa Corporal (Full BMI)
