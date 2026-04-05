@@ -15,7 +15,7 @@ public class HealthCalcImpl implements HealthCalc {
         String result;
         if (bmi < 16) result= "Delgadez Severa";
         else if (bmi < 17) result="Delgadez Moderada";
-        else if (bmi < 18.5) result="Delgadez leve";
+        else if (bmi < 18.5) result="Delgadez Leve";
         else if (bmi < 25) result="Normal";
         else if (bmi < 30) result="Sobrepeso";
         else if (bmi < 35) result="Obesidad I";

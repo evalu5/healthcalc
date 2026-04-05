@@ -61,11 +61,10 @@ public class BMITest {
     @Nested
     @DisplayName("Clasificación en Español")
     class BMIClassificationTests {
-
-        @ParameterizedTest(name = "BMI {0} debe ser Delgadez leve")
+        @ParameterizedTest(name = "BMI {0} debe ser Delgadez Leve")
         @ValueSource(doubles = {17.1, 18.4})
         void testBmiDelgadezLeve(double bmi) throws InvalidHealthDataException {
-            assertEquals("Delgadez leve", healthCalc.bmiClassification(bmi));
+            assertEquals("Delgadez Leve", healthCalc.bmiClassification(bmi));
         }
 
         @ParameterizedTest(name = "BMI {0} debe ser Normal")
@@ -90,7 +89,7 @@ public class BMITest {
         @CsvSource({
             "15.0, Delgadez Severa",
             "16.5, Delgadez Moderada",
-            "18.0, Delgadez leve",
+            "18.0, Delgadez Leve",
             "20.0, Normal",
             "26.0, Sobrepeso",
             "32.0, Obesidad I",
