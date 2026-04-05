@@ -347,7 +347,9 @@ En esta sección se detallan las historias de usuario y los escenarios de prueba
 ### Índice de Masa Corporal (BMI)
 * **Historia de Usuario:** Como usuario de la calculadora de la salud, quiero calcular el BMI para obtener mi indicador de estado nutricional.
 * **Escenarios:**
-    * 
+    * Cálculo exitoso del valor de BMI 
+    * Cálculo del BMI en límites biológicos permitidos
+    * Intento de cálculo del BMI con datos biológicamente imposibles
 
 * **Enlace al fichero:** [BMI.feature](./src/test/resources/features/BMI.feature)
    
