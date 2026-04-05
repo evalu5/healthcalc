@@ -366,7 +366,10 @@ En esta sección se detallan las historias de usuario y los escenarios de prueba
 ### Perímetro Abdominal (WC)
 * **Historia de Usuario:** Como usuario de la calculadora de la salud, quiero clasificar el perímetro abdominal para obtener información sobre mi riesgo cardiovascular.
 * **Escenarios:**
-    *
+    * Verificación de clasificaciones exitosas 
+    * Perímetro en el límite inferior para hombres
+    * Perímetro en el límite inferior para mujeres
+    * Intento de clasificación con datos biológicamente imposibles
 
 * **Enlace al fichero:** [WC.feature](./java-project-healthcalc/src/test/resources/features/WC.feature)
   
