@@ -357,7 +357,9 @@ En esta sección se detallan las historias de usuario y los escenarios de prueba
 ### Clasificación completa del Índice de Masa Corporal (Full BMI)
 * **Historia de Usuario:** Como usuario de la calculadora de la salud, quiero obtener mi categoría de peso para conocer mi estado nutricional.
 * **Escenarios:**
-    * 
+    * Categorización exitosa en todos los rangos
+    * Verificación de los límites de las categorías
+    * Intento de clasificación con valores para BMI fuera de rango biológico (0,150)
 
 * **Enlace al fichero:** [fullBMI.feature](./java-project-healthcalc/src/test/resources/features/fullBMI.feature)
 
