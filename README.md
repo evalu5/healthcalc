@@ -376,6 +376,9 @@ En esta sección se detallan las historias de usuario y los escenarios de prueba
 ### Peso Corporal Ideal (IBW)
 * **Historia de Usuario:** Como usuario de la calculadora de la salud, quiero calcular mi peso ideal según mi altura y género.
 * **Escenarios:**
-    *
+    * Cálculo exitoso del peso ideal para hombres y mujeres
+    * Cálculo del IBW en límites biológicos permitidos
+    * Cálculo con altura fuera de rango
+    * Cálculo con género inválido
 
 * **Enlace al fichero:** [IBW.feature](./java-project-healthcalc/src/test/resources/features/IBW.feature)
