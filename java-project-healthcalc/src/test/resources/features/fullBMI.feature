@@ -4,14 +4,14 @@ Quiero obtener mi categoría de peso según el valor de mi índice de Masa Corpo
 Para conocer mi estado nutricional
 
     Background:
-        Given la calculadora de la salud está iniciada
-        And el ususario ha seleccionado la métrica Full BMI
+        Given la calculadora de salud está iniciada
+        And el usuario ha seleccionado la métrica Full BMI
 
     @HighPriority 
     Scenario Outline: Categorización exitosa en todos los rangos
-        Given un valor de BMI <valor_bmi>
-        When ejecuto la clasificación de BMI
-        Then el resultado debe ser <categoria>
+        Given un valor de BMI es <valor_bmi>
+        When ejecuto el cálculo de Full BMI
+        Then el resultado debe ser "<categoria>"
 
         Examples:
             | valor_bmi | categoria          |
@@ -26,9 +26,9 @@ Para conocer mi estado nutricional
 
     @EdgeCase
     Scenario Outline: Verificación de los límites de las categorías
-        Given un valor de BMI <valor_bmi>
-        When ejecuto la clasificación de BMI
-        Then el resultado debe ser <categoria>
+        Given un valor de BMI es <valor_bmi>
+        When ejecuto el cálculo de Full BMI
+        Then el resultado debe ser "<categoria>"
 
         Examples:
             | valor_bmi | categoria          |
@@ -45,8 +45,8 @@ Para conocer mi estado nutricional
 
     @ErrorHandling
     Scenario Outline: Intento de clasificación con valores para bmi fuera de rango biológico (0,150)
-        Given un valor de BMI <valor_bmi>
-        When ejecuto la clasificación de BMI
+        Given un valor de BMI es <valor_bmi>
+        When ejecuto el cálculo de Full BMI
         Then el sistema debe lanzar una excepción
 
         Examples:
