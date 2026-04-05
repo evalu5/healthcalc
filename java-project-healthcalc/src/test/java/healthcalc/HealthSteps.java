@@ -132,6 +132,8 @@ public class HealthSteps {
         }
     }
 
+    //@Then se reutiliza el mismo que para WC, ya que el resultado es una clasificación String
+
     // --- MANEJO DE ERRORES COMÚN ---
 
     @Then("el sistema debe lanzar una excepción")
