@@ -23,3 +23,23 @@ Para conocer mi estado nutricional
             | 32.5      | Obesidad I         |
             | 37.5      | Obesidad II        |
             | 45.0      | Obesidad III       |
+
+    @EdgeCase
+    Scenario Outline: Verificación de los límites de las categorías
+        Given un valor de BMI <valor_bmi>
+        When ejecuto la clasificación de BMI
+        Then el resultado debe ser <categoria>
+
+        Examples:
+            | valor_bmi | categoria          |
+            | 15.9      | Delgadez Severa    |
+            | 16.0      | Delgadez Moderada  |
+            | 18.4      | Delgadez Leve      |
+            | 18.5      | Normal             |
+            | 24.9      | Normal             |
+            | 25.0      | Sobrepeso          |
+            | 29.9      | Sobrepeso          |
+            | 30.0      | Obesidad I         |
+            | 39.9      | Obesidad II        |
+            | 40.0      | Obesidad III       |
+
