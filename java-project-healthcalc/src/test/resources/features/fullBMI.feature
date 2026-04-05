@@ -43,3 +43,14 @@ Para conocer mi estado nutricional
             | 39.9      | Obesidad II        |
             | 40.0      | Obesidad III       |
 
+    @ErrorHandling
+    Scenario Outline: Intento de clasificación con valores para bmi fuera de rango biológico (0,150)
+        Given un valor de BMI <valor_bmi>
+        When ejecuto la clasificación de BMI
+        Then el sistema debe lanzar una excepción
+
+        Examples:
+            | valor_bmi |
+            | -1.0      |
+            | 150.1     |
+            | 200.0     |
