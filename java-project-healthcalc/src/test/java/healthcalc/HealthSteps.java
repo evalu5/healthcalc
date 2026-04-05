@@ -131,7 +131,12 @@ public class HealthSteps {
             exceptionThrown= true;
         }
     }
-
+    //para leer el texto sin comillas, ya que el plugin de Cucumber agrega comillas a los strings por defecto
+    @Then("^el resultado debe ser ([^\"].*)$")
+    public void el_resultado_debe_ser_sin_comillas(String expected) {
+        assertEquals(expected, resultString);
+    }
+    
     // --- MANEJO DE ERRORES COMÚN ---
 
     @Then("el sistema debe lanzar una excepción")
