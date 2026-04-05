@@ -119,7 +119,17 @@ public class HealthSteps {
     // --- PASOS PARA FULL BMI ---
     @Given("un valor de BMI es {double}")
     public void un_valor_de_bmi_es(Double valor) {
-        this.resultNum = valor;
+        this.resultNum=valor;
+    }
+
+    @When("ejecuto el cálculo de Full BMI")
+    public void ejecuto_el_calculo_de_full_bmi() {
+        try {
+            resultString=healthCalc.bmiClassification(resultNum);
+            exceptionThrown=false;
+        } catch (Exception e) {
+            exceptionThrown= true;
+        }
     }
 
     // --- MANEJO DE ERRORES COMÚN ---
