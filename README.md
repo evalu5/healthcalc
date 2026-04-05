@@ -359,18 +359,18 @@ En esta sección se detallan las historias de usuario y los escenarios de prueba
 * **Escenarios:**
     * 
 
-* **Enlace al fichero:** [fullBMI.feature](./src/test/resources/features/fullBMI.feature)
+* **Enlace al fichero:** [fullBMI.feature](./java-project-healthcalc/src/test/resources/features/fullBMI.feature)
 
 ### Perímetro Abdominal (WC)
 * **Historia de Usuario:** Como usuario de la calculadora de la salud, quiero clasificar el perímetro abdominal para obtener información sobre mi riesgo cardiovascular.
 * **Escenarios:**
     *
 
-* **Enlace al fichero:** [WC.feature](./src/test/resources/features/WC.feature)
+* **Enlace al fichero:** [WC.feature](./java-project-healthcalc/src/test/resources/features/WC.feature)
   
 ### Peso Corporal Ideal (IBW)
 * **Historia de Usuario:** Como usuario de la calculadora de la salud, quiero calcular mi peso ideal según mi altura y género.
 * **Escenarios:**
     *
 
-* **Enlace al fichero:** [IBW.feature](./src/test/resources/features/IBW.feature)
+* **Enlace al fichero:** [IBW.feature](./java-project-healthcalc/src/test/resources/features/IBW.feature)
