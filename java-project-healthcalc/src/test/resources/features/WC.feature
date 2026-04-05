@@ -1,6 +1,6 @@
 
 Feature: Clasificación del Perímetro Abdominal (WC)
-  Como estudiante de Ingeniería de la Salud
+  Como usuario de la calculadora HealthCalc
   Quiero clasificar el perímetro abdominal según el género
   Para obtener información sobre mi riesgo cardiovascular
 

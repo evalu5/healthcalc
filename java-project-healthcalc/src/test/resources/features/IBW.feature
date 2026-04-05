@@ -12,7 +12,7 @@ And el usuario ha seleccionado la métrica IBW
 @HighPriority
 Scenario Outline: Cálculo exitoso del peso ideal para hombres y mujeres
 Given la altura introducida es <altura>
-And el género introducido es <genero>
+And el género es "<genero>"
 When ejecuto el cálculo de IBW
 Then el resultado numérico debe ser <resultado>
 
@@ -28,7 +28,7 @@ Examples:
 @EdgeCase
 Scenario Outline: Cálculo del IBW en límites biológicos permitidos
 Given la altura introducida es <altura>
-And el género introducido es <genero>
+And el género es "<genero>"
 When ejecuto el cálculo de IBW
 Then el resultado numérico debe ser <resultado>
 
@@ -36,7 +36,7 @@ Examples:
 
 | altura | genero | resultado |
 | 30.0   | H      | -40.0     |
-| 30.0   | M      | -30.0     | 
+| 30.0   | M      | -10.0     | 
 | 300.0  | H      | 162.5     |
 | 300.0  | M      | 125.0     |
 
@@ -45,8 +45,8 @@ Scenario Outline: Intento de cálculo con datos inválidos
 
 @InvalidHeight
 Scenario Outline: Cálculo con altura fuera de rango
-Given la altura introducida está fuera del rango permitido
-And el género es <genero>
+Given la altura introducida es <altura>
+And el género es "<genero>"
 When ejecuto el cálculo de IBW
 Then el sistema debe lanzar una excepción
 Examples:
@@ -60,14 +60,14 @@ Examples:
 @InvalidGender
 Scenario Outline: Cálculo con género inválido
 Given la altura introducida es <altura>
-And El género introducido no es válido
+And el género es "<genero>"
 When ejecuto el cálculo de IBW
 Then el sistema debe lanzar una excepción
 
 Examples:
   | altura | genero |
   | 170.0  | X      | 
-  | 170.0  | Hombre | 
+  | 170.0  | Varon  | 
   | 170.0  | q      | 
   | 170.0  | 1      | 
-  | 170.0  |        | 
+  | 170.0  | l      | 

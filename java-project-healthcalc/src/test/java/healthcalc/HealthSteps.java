@@ -36,14 +36,19 @@ public class HealthSteps {
         // Paso informativo
     }
 
+    @Given("el usuario ha seleccionado la métrica IBW")
+    public void el_usuario_ha_seleccionado_la_metrica_ibw() {
+        //Paso Informativo
+    }
+
     // --- PASOS PARA BMI ---
 
-    @Given("el peso es {double}")
+    @Given("el peso introducido es {double}")
     public void el_peso_es(Double value) {
         this.weight = value;
     }
 
-    @Given("la altura es {double}")
+    @Given("la altura introducida es {double}")
     public void la_altura_es(Double value) {
         this.height = value;
     }
@@ -89,6 +94,23 @@ public class HealthSteps {
     public void el_resultado_debe_ser(String expected) {
         assertEquals(expected, resultString);
     }
+     // --- PASOS PARA IBW ---
+
+    /*@Given("la altura introducida es {double}")
+    public void la_altura_es(Double value) {
+        this.height = value;
+    }*/
+
+    @When("ejecuto el cálculo de IBW")
+    public void ejecuto_el_calculo_de_ibw() {
+        try {
+            resultNum = healthCalc.idealBodyWeight(height, gender);
+            exceptionThrown = false;
+        } catch (Exception e) {
+            exceptionThrown = true;
+        }
+    }
+
 
     // --- MANEJO DE ERRORES COMÚN ---
 

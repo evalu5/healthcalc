@@ -37,8 +37,8 @@ Feature: Cálculo del Índice de Masa Corporal (BMI)
 
   @ErrorHandling
   Scenario Outline: Intento de cálculo del BMI con datos biológicamente imposibles
-    Given el peso es <peso>
-    And la altura es <altura>
+    Given el peso introducido es <peso>
+    And la altura introducida es <altura>
     When ejecuto el cálculo de BMI
     Then el sistema debe lanzar una excepción
 
