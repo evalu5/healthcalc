@@ -31,6 +31,11 @@ public class HealthSteps {
         // Paso informativo
     }
 
+    @Given("el usuario ha seleccionado la métrica Full BMI")
+    public void el_usuario_ha_seleccionado_la_métrica_full_bmi() {
+        // Paso informativo
+    }
+
     @Given("el usuario ha seleccionado la métrica WC")
     public void el_usuario_ha_seleccionado_la_métrica_wc() {
         // Paso informativo
