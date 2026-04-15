@@ -29,6 +29,7 @@ replay_pid*
 .project
 .classpath
 .settings/
+.bevel/
 bin/
 
 # Ignorar archivos de IntelliJ
