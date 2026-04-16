@@ -61,10 +61,33 @@ public class HealthCalcView extends JFrame implements ViewHealthCalc {
     public void setMessage(String msg) { lblMensaje.setText(msg); }
 
     @Override
+    public String getCintura() { 
+        return panelWC.getCintura(); 
+    }
+
+    @Override
+    public String getGenero() { 
+        return panelWC.getGenero(); 
+    }
+
+    @Override
+    public void setResultadoWC(String res) {
+        panelWC.setResultado(res);
+    }
+    
+    @Override
+    public void setInterpretacionWC(String texto) {
+        panelWC.setInterpretacionWC(texto); 
+    }
+
+    @Override
     public void setController(ActionListener cIMC) { //, ActionListener cIBW, ActionListener cWC 
         // pasar el controlador a los paneles
         panelIMC.setBtnController(cIMC);
         //panelIBW.setBtnController(cIBW); 
-        //panelWC.setBtnController(cWC);
+    }
+    @Override
+    public void setControllerWC(ActionListener cWC) {  
+        panelWC.setBtnController(cWC);
     }
 }
