@@ -2,6 +2,8 @@ package healthcalc;
 
 import java.util.Scanner;
 import healthcalc.exceptions.InvalidHealthDataException;
+import healthcalc.model.HealthCalc;
+import healthcalc.model.HealthCalcImpl;
 public class Main {
     public static void main(String[] args) {
         HealthCalc calc = new HealthCalcImpl();
