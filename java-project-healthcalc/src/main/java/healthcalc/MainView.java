@@ -14,6 +14,9 @@ public class MainView {
             CtrIMC controllerIMC = new CtrIMC(model, view);
             
             view.setController(controllerIMC); 
+
+            CtrWC controllerWC = new CtrWC(model, view);
+            view.setControllerWC(controllerWC);
             
             view.setVisible(true);
         });
