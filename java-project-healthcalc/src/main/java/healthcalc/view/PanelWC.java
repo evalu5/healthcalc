@@ -50,7 +50,7 @@ public class PanelWC extends JPanel {
     public String getGenero() { return txtGenero.getText(); }
 
     public void setResultado(String res) { lblResultado.setText("Resultado: " + res); }
-    public void setInterpretacion(String texto) { lblInterpretacion.setText("Interpretación: " + texto); }
+    public void setInterpretacionWC(String texto) { lblInterpretacion.setText("Interpretación: " + texto); }
 
     public void setBtnController(ActionListener ctr) {
         btnCalcular.addActionListener(ctr);
