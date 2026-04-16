@@ -27,7 +27,7 @@ public class PanelIMC extends JPanel {
 		txtPeso = new JTextField();
 		add(txtPeso);
 
-		add(new JLabel("Altura (m):"));
+		add(new JLabel("Altura (cm):"));
 		txtAltura = new JTextField();
 		add(txtAltura);
 
@@ -45,6 +45,11 @@ public class PanelIMC extends JPanel {
 
 		lblInterpretacion = new JLabel("Interpretación: -");
 		add(lblInterpretacion);
+		
+		JLabel lblFormula = new JLabel("<html><hr><font size='2.5' color='black'>Para calcular el IMC se ha utilizado la siguiente fórmula:<br>IMC = peso / altura<sup>2</sup></font></html>");
+	    add(lblFormula);
+		
+		
 	}
 
 	public String getPeso() { return txtPeso.getText(); }

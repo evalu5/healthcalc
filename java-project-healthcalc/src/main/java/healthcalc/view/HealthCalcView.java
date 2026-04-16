@@ -18,15 +18,17 @@ public class HealthCalcView extends JFrame implements ViewHealthCalc {
     public HealthCalcView() {
         setTitle("Calculadora de Salud");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(100, 100, 550, 600);
+        setBounds(100, 100, 550, 650);
        
         JPanel contentPane = new JPanel(new BorderLayout(0, 15));
-        contentPane.setBorder(new EmptyBorder(15, 15, 15, 15));
+        contentPane.setBorder(new EmptyBorder(20, 20, 20, 20));
         setContentPane(contentPane);
 
-        lblMensaje = new JLabel("", SwingConstants.CENTER);
+        lblMensaje = new JLabel(" ", SwingConstants.CENTER);
+        lblMensaje.setPreferredSize(new Dimension(550, 30));
         lblMensaje.setForeground(Color.RED);
-        contentPane.add(lblMensaje, BorderLayout.SOUTH);
+        lblMensaje.setFont(new Font("Tahoma", Font.ITALIC, 11));
+        contentPane.add(lblMensaje, BorderLayout.SOUTH);;
 
         tabbedPane = new JTabbedPane();
         

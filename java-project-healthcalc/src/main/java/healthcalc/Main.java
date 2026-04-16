@@ -13,7 +13,7 @@ public class Main {
             double p = sc.nextDouble();
             System.out.print("Enter height (cm): ");
             double a = sc.nextDouble();
-            double imc = calc.bmi(p, a/100.0);
+            double imc = calc.bmi(p, a);
             System.out.println("Your BMI is: " + String.format("%.3f", imc) + " (" + calc.bmiClassification(imc) + ")");
             System.out.print("Enter your gender (H = male, M = female): ");
             char gender = sc.next().toUpperCase().charAt(0);
