@@ -1,42 +1,70 @@
 package healthcalc.view;
 
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import java.awt.*;
+import javax.swing.*;
 import javax.swing.border.EmptyBorder;
+import java.awt.event.ActionListener;
 
-public class HealthCalcView extends JFrame {
+public class HealthCalcView extends JFrame implements ViewHealthCalc {
+    private JTabbedPane tabbedPane;
+    private JLabel lblMensaje;
+    
+    // Paneles de las pestañas
+    private PanelIMC panelIMC;
+    private PanelInfo panelInfo;
+    private PanelIBW panelIBW; 
+    private PanelWC panelWC;
 
-	private static final long serialVersionUID = 1L;
-	private JPanel contentPane;
+    public HealthCalcView() {
+        setTitle("Calculadora de Salud");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setBounds(100, 100, 550, 650);
+       
+        JPanel contentPane = new JPanel(new BorderLayout(0, 15));
+        contentPane.setBorder(new EmptyBorder(20, 20, 20, 20));
+        setContentPane(contentPane);
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					HealthCalcView frame = new HealthCalcView();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+        lblMensaje = new JLabel(" ", SwingConstants.CENTER);
+        lblMensaje.setPreferredSize(new Dimension(550, 30));
+        lblMensaje.setForeground(Color.RED);
+        lblMensaje.setFont(new Font("Tahoma", Font.ITALIC, 11));
+        contentPane.add(lblMensaje, BorderLayout.SOUTH);;
 
-	/**
-	 * Create the frame.
-	 */
-	public HealthCalcView() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
+        tabbedPane = new JTabbedPane();
+        
+        panelInfo = new PanelInfo();
+        panelIMC = new PanelIMC();
+        panelIBW = new PanelIBW(); 
+        panelWC = new PanelWC();
+        
+        tabbedPane.addTab("Información", panelInfo);
+        tabbedPane.addTab("IMC", panelIMC);
+        tabbedPane.addTab("IBW", panelIBW); 
+        tabbedPane.addTab("WC", panelWC);  
 
-	}
+        contentPane.add(tabbedPane, BorderLayout.CENTER);
+    }
 
+    @Override
+    public String getPeso() { return panelIMC.getPeso(); }
+
+    @Override
+    public String getAltura() { return panelIMC.getAltura(); }
+
+    @Override
+    public void setResultado(String res) { panelIMC.setResultado(res); }
+
+    @Override
+    public void setInterpretacion(String texto) { panelIMC.setInterpretacion(texto); }
+
+    @Override
+    public void setMessage(String msg) { lblMensaje.setText(msg); }
+
+    @Override
+    public void setController(ActionListener cIMC) { //, ActionListener cIBW, ActionListener cWC 
+        // pasar el controlador a los paneles
+        panelIMC.setBtnController(cIMC);
+        //panelIBW.setBtnController(cIBW); 
+        //panelWC.setBtnController(cWC);
+    }
 }
