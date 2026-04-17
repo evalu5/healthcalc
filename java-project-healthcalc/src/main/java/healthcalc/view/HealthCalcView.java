@@ -69,11 +69,17 @@ public class HealthCalcView extends JFrame implements ViewHealthCalc {
     public String getGenero() { 
         return panelWC.getGenero(); 
     }
+    @Override
+    public String getGeneroIBW() { 
+    	return panelIBW.getGenero(); }
 
     @Override
     public void setResultadoWC(String res) {
         panelWC.setResultado(res);
     }
+    @Override
+    public void setResultadoIBW(String res) { 
+    	panelIBW.setResultado(res); }
     
     @Override
     public void setInterpretacionWC(String texto) {
@@ -84,10 +90,21 @@ public class HealthCalcView extends JFrame implements ViewHealthCalc {
     public void setController(ActionListener cIMC) { //, ActionListener cIBW, ActionListener cWC 
         // pasar el controlador a los paneles
         panelIMC.setBtnController(cIMC);
-        //panelIBW.setBtnController(cIBW); 
+        
     }
     @Override
     public void setControllerWC(ActionListener cWC) {  
         panelWC.setBtnController(cWC);
     }
+
+	@Override
+	public String getAlturaIBW() {
+		return panelIBW.getAltura();
+	}
+
+	@Override
+	public void setControllerIBW(ActionListener cWc) {
+		
+	}
+    
 }
