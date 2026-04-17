@@ -6,6 +6,11 @@ public interface ViewHealthCalc {
     
     public String getPeso();
     public String getAltura();
+
+    public String getCintura();
+    public String getGenero();
+    public void setResultadoWC(String res);
+    public void setInterpretacionWC(String msg);
     
     public void setInterpretacion(String msg);
     public void setResultado(String res);
@@ -13,4 +18,5 @@ public interface ViewHealthCalc {
     
    
     public void setController(ActionListener ctr);
+    public void setControllerWC(ActionListener cWC);
 }
