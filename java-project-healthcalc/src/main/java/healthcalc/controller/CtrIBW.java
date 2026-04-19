@@ -18,12 +18,19 @@ public class CtrIBW implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent event) {
         if (event.getActionCommand().equalsIgnoreCase("CALCULAR_IBW")) {
+            System.out.println("boton funciona");
+            try {
             double altura = Double.parseDouble(view.getAlturaIBW());
             char genero = view.getGeneroIBW().toUpperCase().trim().charAt(0);
 
             double pesoIdeal = model.idealBodyWeight(altura, genero);
             
-            view.setResultadoIBW(String.valueOf(pesoIdeal));
+            view.setResultadoIBW(String.valueOf(pesoIdeal)); 
+
+            } catch (Exception e) {
+                view.setMessage(e.getMessage());
+            }
+                
         }
     }
 }

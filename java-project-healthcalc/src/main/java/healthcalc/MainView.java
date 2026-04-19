@@ -18,9 +18,10 @@ public class MainView {
             CtrWC controllerWC = new CtrWC(model, view);
             view.setControllerWC(controllerWC);
             
-            view.setVisible(true);
+            
             CtrIBW controladorIBW = new CtrIBW(model, view);
             view.setControllerIBW(controladorIBW);
+            view.setVisible(true);
         });
     }
 }
