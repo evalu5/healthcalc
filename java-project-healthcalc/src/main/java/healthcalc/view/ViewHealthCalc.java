@@ -24,5 +24,6 @@ public interface ViewHealthCalc {
     public void setController(ActionListener ctr);
     public void setControllerWC(ActionListener cWC);
     public void setControllerIBW(ActionListener cWc);
+    public void setInterpretacionIBW(String texto);
 	
 }

@@ -106,5 +106,9 @@ public class HealthCalcView extends JFrame implements ViewHealthCalc {
 	public void setControllerIBW(ActionListener cIBW) {
 		panelIBW.setBtnController(cIBW);
 	}
+    @Override
+    public void setInterpretacionIBW(String t) { 
+        panelIBW.setInterpretacion(t); 
+}
     
 }

@@ -20,7 +20,9 @@ public class CtrIBW implements ActionListener{
         if (event.getActionCommand().equalsIgnoreCase("CALCULAR_IBW")) {
             
             try {
-            
+            view.setMessage(" ");
+            view.setInterpretacionIBW("-");
+
             String generostr = view.getGeneroIBW().toUpperCase().trim();
             String alturastr= view.getAlturaIBW().trim();
             alturastr = alturastr.replace(',', '.'); //evita el error de formato y manda al error de fuera de rango si el usuario intenta introducir la altura en metros con ","
@@ -38,6 +40,17 @@ public class CtrIBW implements ActionListener{
             double pesoIdeal = model.idealBodyWeight(altura, genero);
             String rformat= String.format("%.2f", pesoIdeal);
             view.setResultadoIBW(String.valueOf(rformat)); 
+            
+            String gen = "";
+            if (genero == 'H') {
+                gen= "un hombre";
+             }
+            else{gen="una mujer"; }
+
+
+            String interpretacion = "El peso ideal de " + gen + " que mide " + alturastr + " cm sería " + rformat + " kg.";
+        
+            view.setInterpretacionIBW(interpretacion);
 
             } catch (Exception e) {
                 view.setMessage(e.getMessage());
