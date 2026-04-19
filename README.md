@@ -393,8 +393,8 @@ En esta sección se detallan las historias de usuario y los escenarios de prueba
 </details>  
 
 ## Interfaz Gráfica de Usuario
-![Captura de la interfaz (1)](doc/gui/1.panelInfo.png)
-![Captura de la interfaz (2)](doc/gui/2.panelIMC.png)
-![Captura de la interfaz (3)](doc/gui/3.panelIBW.png)
-![Captura de la interfaz (4)](doc/gui/4.panelWC.png)
+![Captura de la interfaz (1)](doc/GUI/1.PanelInfo.png)
+![Captura de la interfaz (2)](doc/GUI/2.PanelIMC.png)
+![Captura de la interfaz (3)](doc/GUI/3.PanelIBW.png)
+![Captura de la interfaz (4)](doc/GUI/4.PanelWC.png)
 
