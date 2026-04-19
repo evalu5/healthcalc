@@ -23,7 +23,7 @@ public class CtrWC implements ActionListener {
                 double cintura = Double.parseDouble(view.getCintura());
                 String generostr = view.getGenero().toUpperCase().trim();
                 if (generostr.isEmpty()) {
-                    view.setInterpretacion("Error: Introduce Género.");
+                    view.setInterpretacion("Error: Introduce Género (H/M).");
                     return;
                 }
                 
