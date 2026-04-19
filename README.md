@@ -391,3 +391,10 @@ En esta sección se detallan las historias de usuario y los escenarios de prueba
 
 * **Enlace al fichero:** [IBW.feature](./java-project-healthcalc/src/test/resources/features/IBW.feature)
 </details>  
+
+## Interfaz Gráfica de Usuario
+![Captura de la interfaz (1)](doc/gui/1.panelInfo.png)
+![Captura de la interfaz (2)](doc/gui/2.panelIMC.png)
+![Captura de la interfaz (3)](doc/gui/3.panelIBW.png)
+![Captura de la interfaz (4)](doc/gui/4.panelWC.png)
+
