@@ -3,7 +3,6 @@ package healthcalc.controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import healthcalc.model.HealthCalc;
-import healthcalc.view.PanelWC;
 import healthcalc.view.ViewHealthCalc;
 
 public class CtrWC implements ActionListener { 
@@ -23,7 +22,7 @@ public class CtrWC implements ActionListener {
                 double cintura = Double.parseDouble(view.getCintura());
                 String generostr = view.getGenero().toUpperCase().trim();
                 if (generostr.isEmpty()) {
-                    view.setInterpretacion("Error: Introduce Género.");
+                    view.setInterpretacion("Error: Introduce Género (H/M).");
                     return;
                 }
                 
