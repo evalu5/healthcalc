@@ -18,14 +18,26 @@ public class CtrIBW implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent event) {
         if (event.getActionCommand().equalsIgnoreCase("CALCULAR_IBW")) {
-            System.out.println("boton funciona");
+            
             try {
-            double altura = Double.parseDouble(view.getAlturaIBW());
-            char genero = view.getGeneroIBW().toUpperCase().trim().charAt(0);
+            
+            String generostr = view.getGeneroIBW().toUpperCase().trim();
+            String alturastr= view.getAlturaIBW().trim();
+            alturastr = alturastr.replace(',', '.'); //evita el error de formato y manda al error de fuera de rango si el usuario intenta introducir la altura en metros con ","
+            if (generostr.isEmpty()){
+                view.setMessage("Error: Introduce Género (H/M)");
+                return;
+            }
+            if (alturastr.isEmpty()) {
+                view.setMessage("Error: Introduzca altura (cm)");
+                return;
+            }
+            char genero=generostr.charAt(0);
+            double altura = Double.parseDouble(alturastr);
 
             double pesoIdeal = model.idealBodyWeight(altura, genero);
-            
-            view.setResultadoIBW(String.valueOf(pesoIdeal)); 
+            String rformat= String.format("%.2f", pesoIdeal);
+            view.setResultadoIBW(String.valueOf(rformat)); 
 
             } catch (Exception e) {
                 view.setMessage(e.getMessage());

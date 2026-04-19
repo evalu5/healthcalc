@@ -3,7 +3,6 @@ package healthcalc.controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import healthcalc.model.HealthCalc;
-import healthcalc.view.PanelWC;
 import healthcalc.view.ViewHealthCalc;
 
 public class CtrWC implements ActionListener { 
