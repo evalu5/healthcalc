@@ -426,11 +426,15 @@ Se ha aplicado el patrón Singleton a la clase 'HealthCalcImpl'. Esto garantiza 
 ![Captura del patrón (1)](design_patterns/PatronSingularUML.png)
 
 </details> 
-<details>
-<summary><b>Patrón ...</b></summary>
+<<summary><b>Patrón Adaptador (Adapter) - Punto 3.a</b></summary>
+Se ha implementado el patrón Adapter para permitir la integración de nuestra calculadora con el sistema del Hospital Costa del Sol. 
 
-![Captura del patrón (2)](design_patterns/)
-</details> 
+* **Funcionalidad:** El adaptador traduce las unidades de medida del hospital (metros y gramos) a las unidades internas de la calculadora (centímetros y kilogramos).
+* **Interoperabilidad:** Permite que la calculadora sea utilizada por sistemas externos con interfaces diferentes sin modificar el código original.
+
+![Captura del patrón (2)](design_patterns/3a (2).png)
+
+</details>
 
 <details>
 <summary><b>Patrón ...</b></summary>
