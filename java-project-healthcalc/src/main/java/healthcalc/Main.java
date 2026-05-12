@@ -42,6 +42,25 @@ public class Main {
             System.out.println("Resultado IMC Adaptado: " + resHospital[0]);
             System.out.println("Peso Ideal Adaptado: " + pesoIdealHospital + " kg");
 
+            //apartado 3b
+
+            System.out.println("PRUEBA DEL PATRÓN PROXY (ESTADÍSTICAS)");
+            
+            
+            HealthStatsProxy proxy = new HealthStatsProxy();
+            
+            System.out.println("Registrando datos de 3 pacientes...");
+            proxy.bmi(60.0, 160.0); // Paciente 1
+            proxy.bmi(80.0, 180.0); // Paciente 2
+            proxy.bmi(100.0, 170.0); // Paciente 3
+            
+            // Mostramos los resultados que el Proxy ha ido guardando
+            System.out.println("Estadísticas acumuladas:");
+            System.out.println("- Total pacientes: " + proxy.numTotalPacientes());
+            System.out.println("- Peso medio: " + String.format("%.2f", proxy.pesoMedio()) + " kg");
+            System.out.println("- Altura media: " + String.format("%.2f", proxy.alturaMedia()) + " cm");
+            System.out.println("- IMC medio: " + String.format("%.2f", proxy.imcMedio()));
+
         } catch (InvalidHealthDataException e) {
             System.out.println("Error: " + e.getMessage());
         }
