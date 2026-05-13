@@ -1,6 +1,7 @@
 package healthcalc;
 
 import java.util.Scanner;
+
 import healthcalc.exceptions.InvalidHealthDataException;
 import healthcalc.model.HealthCalc;
 import healthcalc.model.HealthCalcImpl;
@@ -23,6 +24,43 @@ public class Main {
             double waist = sc.nextDouble();
             String wcRisk = calc.wcClassification(waist, gender);
             System.out.println("Your Cardiovascular Risk is: " + wcRisk);
+
+            // apartado 3.a
+        
+            System.out.println("PRUEBA DEL PATRÓN ADAPTER (HOSPITAL)");
+            
+            HealthHospital hospital = new HealthHospitalAdapter();
+            
+            // Datos fijos para comprobar que funciona (Modo Cliente)
+            float alturaHospital = 1.70f; // Metros
+            int pesoHospital = 72500;     // Gramos
+
+            float[] resHospital = hospital.indiceMasaCorporal(alturaHospital, pesoHospital);
+            int pesoIdealHospital = hospital.pesoCorporalIdeal('M', alturaHospital); // Usamos 'M' por ejemplo
+
+            System.out.println("Datos enviados por Hospital: " + alturaHospital + "m, " + pesoHospital + "g");
+            System.out.println("Resultado IMC Adaptado: " + resHospital[0]);
+            System.out.println("Peso Ideal Adaptado: " + pesoIdealHospital + " kg");
+
+            //apartado 3b
+
+            System.out.println("PRUEBA DEL PATRÓN PROXY (ESTADÍSTICAS)");
+            
+            
+            HealthStatsProxy proxy = new HealthStatsProxy();
+            
+            System.out.println("Registrando datos de 3 pacientes...");
+            proxy.bmi(60.0, 160.0); // Paciente 1
+            proxy.bmi(80.0, 180.0); // Paciente 2
+            proxy.bmi(100.0, 170.0); // Paciente 3
+            
+            // Mostramos los resultados que el Proxy ha ido guardando
+            System.out.println("Estadísticas acumuladas:");
+            System.out.println("- Total pacientes: " + proxy.numTotalPacientes());
+            System.out.println("- Peso medio: " + String.format("%.2f", proxy.pesoMedio()) + " kg");
+            System.out.println("- Altura media: " + String.format("%.2f", proxy.alturaMedia()) + " cm");
+            System.out.println("- IMC medio: " + String.format("%.2f", proxy.imcMedio()));
+
         } catch (InvalidHealthDataException e) {
             System.out.println("Error: " + e.getMessage());
         }
